@@ -1,4 +1,4 @@
-from transactions_data import transactions
+from transactions import transactions
 
 def view_transactions():
     if not transactions:
