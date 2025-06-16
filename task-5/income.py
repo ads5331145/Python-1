@@ -1,4 +1,4 @@
-from transactions_data import transactions
+from transactions import transactions
 
 def add_income():
     amount = float(input("Enter income amount: ₹"))
