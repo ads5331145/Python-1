@@ -44,8 +44,6 @@ while True:
                 txn_tuple = (t['amount'], t['type'], t['description'])
                 print("Amount: ₹", txn_tuple[0], "| Type:", txn_tuple[1], "| Description:", txn_tuple[2])
 
-            print("\nUnique Descriptions:", descriptions_set)
-
     elif choice == "3":
         print("Exiting..")
         break
