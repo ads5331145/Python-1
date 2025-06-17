@@ -33,7 +33,7 @@ while True:
 
     elif choice == "4":
         print("Loop Counter Example (1 to 10):")
-        for i in range(1, 10):  # For loop example
+        for i in range(1, 11):  # For loop example
             print("Count:", i)
 
     elif choice == "5":
