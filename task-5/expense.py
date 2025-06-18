@@ -1,6 +1,5 @@
-from transactions import transactions
-
-def add_expense():
+def add_expense(transactions):
     amount = float(input("Enter expense amount: ₹"))
-    transactions.append({"type": "expense", "amount": amount})
-    print(" Expense of ₹{amount} added.")
+    description = input("Enter description for expense: ")
+    transactions.append(("expense", amount, description))
+    print(f"Expense of ₹{amount} added.")
