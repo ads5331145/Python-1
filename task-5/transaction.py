@@ -1,20 +1,23 @@
-from transactions import transactions
-
-def view_transactions():
+def view_transactions(transactions):
     if not transactions:
-        print(" No transactions to show.")
+        print(" No transactions found.")
         return
-    for i, txn in enumerate(transactions, 1):
-        print(f"{i}. {txn['type'].capitalize()} - ₹{txn['amount']}")
 
-def delete_transaction():
-    view_transactions()
-    try:
-        index = int(input("Enter transaction number to delete: "))
-        if 1 <= index <= len(transactions):
-            removed = transactions.pop(index - 1)
-            print(" Deleted: {removed['type']} ₹{removed['amount']}")
-        else:
-            print("Invalid transaction number.")
-    except ValueError:
-        print("Please enter a valid number.")
+    print("All Transactions:")
+    for idx, txn in enumerate(transactions):
+        print(f"{idx + 1}. Type: {txn[0]} | Amount: ₹{txn[1]} | Description: {txn[2]}")
+
+def delete_transaction(transactions):
+    if not transactions:
+        print("No transactions to delete.")
+        return
+
+    view_transactions(transactions)
+    index = int(input("Enter transaction number to delete: ")) - 1
+
+    if 0 <= index < len(transactions):
+        removed = transactions.pop(index)
+        print(f"Deleted transaction: {removed}")
+    else:
+        print(" Invalid transaction number.")
+
