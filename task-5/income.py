@@ -1,6 +1,5 @@
-from transactions import transactions
-
-def add_income():
+def add_income(transactions):
     amount = float(input("Enter income amount: ₹"))
-    transactions.append({"type": "income", "amount": amount})
-    print(" Income of {amount} added.")
+    description = input("Enter description for income: ")
+    transactions.append(("income", amount, description))
+    print(f" Income of ₹{amount} added.")
