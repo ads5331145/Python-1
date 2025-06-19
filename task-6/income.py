@@ -17,3 +17,4 @@ def add_income(transactions):
         print("Income added successfully!")
     else:
         print("Invalid amount. Must be a number.")
+

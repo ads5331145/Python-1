@@ -36,6 +36,7 @@ def main():
             print("Exiting...")
             break
         else:
+
             print("Invalid choice. Please select 1 to 6.")
 
 if __name__ == "__main__":

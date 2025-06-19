@@ -10,6 +10,7 @@ def load_transactions_from_csv():
     Returns:
         list: List of transactions as dictionaries.
     """
+
     transactions = []
     if os.path.exists(CSV_FILE):
         with open(CSV_FILE, mode='r', newline='') as file:
@@ -47,6 +48,7 @@ def overwrite_csv(transactions):
     Args:
         transactions (list): All current transactions to write to file.
     """
+
     with open(CSV_FILE, mode='w', newline='') as file:
         fieldnames = ["type", "amount", "category"]
         writer = csv.DictWriter(file, fieldnames=fieldnames)

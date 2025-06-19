@@ -5,6 +5,7 @@ def view_balance(transactions):
     Args:
         transactions (list): List of transaction dictionaries.
     """
+
     income = sum(t["amount"] for t in transactions if t["type"] == "income")
     expense = sum(t["amount"] for t in transactions if t["type"] == "expense")
     balance = income - expense
