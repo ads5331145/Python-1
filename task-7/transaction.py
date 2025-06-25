@@ -1,3 +1,5 @@
+import csv  # Imported at the top
+
 def view_transactions(transactions):
     """
     Displays all transactions.
@@ -10,11 +12,11 @@ def view_transactions(transactions):
     for idx, txn in enumerate(transactions, 1):
         print(f"{idx}. {txn}")
 
+
 def save_transactions_to_file(transactions, filename):
     """
     Saves transactions to a file in CSV format.
     """
-    import csv
     try:
         with open(filename, mode="w", newline="") as file:
             writer = csv.DictWriter(file, fieldnames=["type", "amount", "source", "category"])
@@ -25,6 +27,7 @@ def save_transactions_to_file(transactions, filename):
     except IOError:
         print(f"Error: Could not write to file {filename}.")
 
+
 def load_transactions_from_file(filename):
     """
     Loads transactions from a CSV file.
@@ -32,7 +35,6 @@ def load_transactions_from_file(filename):
     Returns:
         List of transactions or empty list if file fails to load.
     """
-    import csv
     transactions = []
     try:
         with open(filename, mode="r") as file:

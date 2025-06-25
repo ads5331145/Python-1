@@ -27,8 +27,12 @@ def main():
         elif choice == "2":
             try:
                 amount = float(input("Enter expense amount: "))
-                category = input("Enter expense category: ")
-                add_expense(transactions, amount, category)
+                category = input("Enter expense category (should be 'expense'): ").strip().lower()
+                
+                if category != "expense":
+                    print("Invalid category! Please enter only 'expense' as category.")
+                else:
+                    add_expense(transactions, amount, category)
             except ValueError:
                 print("Invalid input: Please enter a numeric value for amount.")
 
