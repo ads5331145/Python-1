@@ -1,9 +1,6 @@
 # Store all transactions in a list
 transactions = []
 
-# Store unique descriptions using a set
-descriptions_set = set()
-
 while True:
     print("\n Transaction Menu")
     print("1. Add Transaction")
